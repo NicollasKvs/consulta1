@@ -1,0 +1,44 @@
+### Cadastro de usuário
+POST http://localhost:5000/usuarios/cadastrar
+Content-Type: application/json
+
+{
+  "email": "teste@email.com",
+  "senha": "123456"
+}
+
+###
+
+### Login
+POST http://localhost:5000/usuarios/login
+Content-Type: application/json
+
+{
+  "email": "teste@email.com",
+  "senha": "123456"
+}
+
+###
+
+### Criar tarefa (cole o token no lugar de {TOKEN})
+POST http://localhost:5000/tarefas/cadastrar
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdGVAZW1haWwuY29tIiwiZXhwIjoxNzUwMTAxMjI0fQ.Thewdi9wACYUtNS2Rc0pztIhcTre7sxNfEuX3aghCSg
+
+{
+  "titulo": "Estudar para a prova"
+}
+
+###
+
+### Listar tarefas do usuário
+GET http://localhost:5000/tarefas/usuario
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdGVAZW1haWwuY29tIiwiZXhwIjoxNzUwMTAxMjI0fQ.Thewdi9wACYUtNS2Rc0pztIhcTre7sxNfEuX3aghCSg
+
+
+###
+
+### Atualizar status da tarefa (troque {ID})
+PATCH http://localhost:5000/tarefas/7/status
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidGVzdGVAZW1haWwuY29tIiwiZXhwIjoxNzUwMTAxMjI0fQ.Thewdi9wACYUtNS2Rc0pztIhcTre7sxNfEuX3aghCSg
+
